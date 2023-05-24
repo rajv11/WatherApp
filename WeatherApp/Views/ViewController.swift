@@ -17,7 +17,9 @@ class ViewController: UIViewController {
     // MARK: - Properties
     
     private let lastSearchedCityKey = "LastSearchedCity"    // Key for storing/retrieving the last searched city in UserDefaults
-    private let weatherViewModel: WeatherViewModel = WeatherViewModel(weatherDataService: WeatherDataService(apiKey: "a1ea85301848955ec96feab31e39100b"),locationService: LocationService())    // Weather view model instance for fetching weather data
+    private static var apiKey: String = Bundle.main.object(forInfoDictionaryKey: "APIKey") as! String
+    
+    private let weatherViewModel: WeatherViewModel = WeatherViewModel(weatherDataService: WeatherDataService(apiKey: apiKey),locationService: LocationService())    // Weather view model instance for fetching weather data
     private var activityIndicatorView: UIActivityIndicatorView!     // Activity indicator view for showing loading state
     
     // MARK: - View Lifecycle
