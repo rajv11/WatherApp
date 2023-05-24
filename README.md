@@ -1,6 +1,7 @@
 # WatherApp
 
 • Please use a API key provided by openweathermap.org
+![image](Screenshots/3.png)
 
 • For first launch the app will ask location permissions.
 
